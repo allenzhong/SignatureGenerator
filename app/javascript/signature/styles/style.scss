@@ -1,20 +1,150 @@
 .container {
   display: flex;
-  width: 400px;
+  flex-direction: row;
+  width: 100%;
+  justify-content: flex-start;
+}
+
+.form {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  width: 30%;
   height: auto;
   margin: auto;
   border: 1px solid #ccc;
   box-shadow: 1px;
-}
-
-.form {
-  justify-content: center;
   .form-group {
+    margin: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
     label {
+      flex-basis: 20%;
+      flex-grow: 1;
       font-size: 1.1em; 
+      font-weight: bold;
     }
     input {
+      flex-grow: 3;
       font-size: 1.1em; 
+    }
+  }
+}
+
+.panel {
+  flex-grow: 4;
+  width: 70%;
+
+  table {
+    .logo {
+      width: 140px;
+      img {
+        margin: 7 17 18 18px;
+        width: 125px;
+      }
+    } 
+
+    .spliter {
+      width: 2px;
+      height: 168px;
+      div {
+        height: 155px; 
+        background-color: #E21837;
+        width: 2px;
+      }
+    }
+
+    .spacer {
+      width: 10px;
+    }
+
+    .content {
+      line-height: 1;
+      padding: 10px 1px 5px 2px;
+      width: 150px;
+      tr td {
+        font-family:georgia,serif;
+      }
+
+      tr.title td {
+        font-weight: bold;
+        color:RGB(29, 29, 29);
+        font-size:11px;
+      }
+
+      tr.position td {
+        color:rgb(85,96,97);
+        font-size:10px;
+        font-style:italic;
+        line-height: 1.3em;
+        // padding: 5px 0;
+      }
+
+      tr.telephone td {
+        font-weight: bold;
+        color:RGB(126, 125, 125);
+        font-size:9px;
+        a {
+          color:RGB(89, 87, 87);
+          text-decoration: none;
+        }
+      }
+
+      tr.email td {
+        a {
+          color:rgb(85,96,97);
+          text-decoration:none;
+          font-size:9px;
+        }
+      }
+
+      tr.street td {
+        color:rgb(85,96,97);
+        font-size:9px;
+      }
+
+      tr.city td {
+        color:rgb(85,96,97);
+        font-size:9px;
+      }
+
+      tr.website td{
+        font-size:9px;
+        a {
+          color:rgb(85,96,97);
+          font-size:9px;
+          text-decoration:none;
+          // vertical-align:middle;
+        }
+      }
+    }
+
+    .ad a {
+      img {
+        float: left;
+        width: 333px;
+      }
+    }
+  }
+}
+
+table.small-icons {
+  margin-top: 6px;
+
+  tbody tr td {
+    padding-left: 0px;
+
+    span {
+      font-family:georgia,serif;
+      a {
+        color:rgb(255,255,255);
+        text-decoration:none;
+        img {
+          width: 20px;
+          height: 20px;
+        }
+      }
     }
   }
 }

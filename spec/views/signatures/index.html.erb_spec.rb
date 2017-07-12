@@ -1,5 +1,14 @@
 require 'rails_helper'
 
-RSpec.describe "signatures/index.html.erb", type: :view do
-  pending "add some examples to (or delete) #{__FILE__}"
+RSpec.describe "signatures/index", type: :view do
+  before(:each) do
+    assign(:signatures, [
+      Signature.create!(),
+      Signature.create!()
+    ])
+  end
+
+  it "renders a list of signatures" do
+    render
+  end
 end
