@@ -6,39 +6,39 @@ export default class SignatureForm extends Component {
       <div className='form'>
         <div className="form-group">
           <label>Name</label>
-          <input type='text' name='name'></input>
+          <input type='text' name='name' onChange={this.props.onChangeInput}></input>
         </div>
         <div className="form-group">
           <label>Position</label>
-          <input type='text' name='position'></input>
+          <input type='text' name='position' onChange={this.props.onChangeInput}></input>
         </div>
         <div className="form-group">
           <label>Telephone</label>
-          <input type='text' name='telephone'></input>
+          <input type='text' name='telephone' onChange={this.props.onChangeInput}></input>
         </div>
         <div className="form-group">
           <label>Email</label>
-          <input type='text' name='email'></input>
+          <input type='text' name='email' onChange={this.props.onChangeInput}></input>
         </div>
         <div className="form-group">
           <label>Street</label>
-          <input type='text' name='street'></input>
+          <input type='text' name='street' onChange={this.props.onChangeInput}></input>
         </div>
         <div className="form-group">
           <label>City</label>
-          <input type='text' name='city'></input>
+          <input type='text' name='city' onChange={this.props.onChangeInput}></input>
         </div>
         <div className="form-group">
           <label>Postcode</label>
-          <input type='text' name='postcode'></input>
+          <input type='text' name='postcode' onChange={this.props.onChangeInput}></input>
         </div>
         <div className="form-group">
           <label>Country</label>
-          <input type='text' name='country'></input>
+          <input type='text' name='country' onChange={this.props.onChangeInput}></input>
         </div>
         <div className="form-group">
           <label>website</label>
-          <input type='text' name='website'></input>
+          <input type='text' name='website' onChange={this.props.onChangeInput}></input>
         </div>
       </div>
     );

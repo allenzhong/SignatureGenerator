@@ -23,37 +23,38 @@ export default class SignaturePanel extends Component {
                   <tbody>
                     <tr className="title">
                       <td>
-                       José-Marie CORTÈS&nbsp; 
+                       {this.props.name || "José-Marie CORTÈS"}
                       </td> 
                     </tr>
                     <tr className="position">
                       <td>
-                      Director -  Representative&nbsp; of the Fondation Alliance Française in New Zealand &amp; Cook Islands
+                      {this.props.position || "Director - Representative of the Fondation Alliance Française in New Zealand & Cook Islands"}
+                      
                       </td>
                     </tr>
                     <tr className="telephone">
                       <td>
-                        <a href="tel:+64%209-376%200009" value="+6493760009" target="_blank">+64 (09) 376 0009</a>
+                        <a href={"tel:" + this.props.telephone || "+64(09)-376 00009"} value={this.props.telephone || "tel:+64(09)-376 00009"} target="_blank">{this.props.telephone || "+64(09)-376 00009"}</a>
                       </td>
                     </tr>
                     <tr className="email">
                       <td>
-                        <a href="mailto:communication@alliance-francaise.co.nz" target="_blank">director@alliance-francaise.co.nz</a>
+                        <a href={"mailto:" + this.props.email || "director@alliance-francaise.co.nz"} target="_blank">{this.props.email || "director@alliance-francaise.co.nz"}</a>
                       </td>
                     </tr>
                     <tr className="street">
                       <td>
-                      9a Kirk Street, Grey Lynn
+                      {this.props.street || "9a Kirk Street, Grey Lynn"}
                       </td>
                     </tr>
                     <tr className="city">
                       <td>
-                      Auckland 1021, New Zealand
+                      { this.props.city  ? `${this.props.city} ${this.props.postcode}, ${this.props.country}` : "Auckland 1021, New Zealand"}
                       </td>
                     </tr>
                     <tr className="website">
                       <td>
-                        <a href="http://www.alliance-francaise.co.nz/" target="_blank">www.alliance-francaise.co.nz</a>
+                        <a href={this.props.website || "http://www.alliance-francaise.co.nz/"} target="_blank">{this.props.website || "http://www.alliance-francaise.co.nz/"}</a>
                       </td>
                     </tr>
                     <tr>
