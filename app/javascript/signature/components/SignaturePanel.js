@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 export default class SignaturePanel extends Component {
   render() {
@@ -123,4 +124,16 @@ export default class SignaturePanel extends Component {
       </div>
     );
   }
+}
+
+SignaturePanel.propTypes = {
+  name: PropTypes.string,
+  position: PropTypes.string,
+  telephone: PropTypes.string,
+  email: PropTypes.string,
+  street: PropTypes.string,
+  city: PropTypes.string,
+  postcode: PropTypes.string,
+  country: PropTypes.string,
+  website: PropTypes.string
 }

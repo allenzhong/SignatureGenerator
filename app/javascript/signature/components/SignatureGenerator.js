@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import SignatureForm from './SignatureForm';
 import SignaturePanel from './SignaturePanel';
-import PropTypes from 'prop-types';
 
 export default class SignatureGenerator extends Component {
   constructor(props) {
@@ -50,14 +49,4 @@ export default class SignatureGenerator extends Component {
   }
 }
 
-SignatureGenerator.propTypes = {
-  name: PropTypes.string,
-  position: PropTypes.string,
-  telephone: PropTypes.string,
-  email: PropTypes.string,
-  street: PropTypes.string,
-  city: PropTypes.string,
-  postcode: PropTypes.string,
-  country: PropTypes.string,
-  website: PropTypes.string
-}
+
