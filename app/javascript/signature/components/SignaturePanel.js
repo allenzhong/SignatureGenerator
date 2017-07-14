@@ -11,14 +11,6 @@ export default class SignaturePanel extends Component {
               <td className="logo">
                 <img src="https://ci4.googleusercontent.com/proxy/t_oqu9__zJWZibFIfW2r9CDr6o_EsPPblPBCGU5GNHc9SfW5wvJVookonnsEqmwbV3BOxJ1qp5gcruq7CDXfKxhBNnEwGO5lzmOFyeow6miEBv45yRfsowMWg1mCGAKYvVQ_=s0-d-e1-ft#https://alliance-francaise.sslsvc.com/media/website_pages/AF_Auckland_NZ2.png" alt="" />
               </td>
-              <td className="spliter">
-                <div>
-                  &nbsp;
-                </div>
-              </td>
-              <td className="spacer">
-                 &nbsp;
-              </td>
               <td className="content">
                 <table>
                   <tbody>
@@ -108,14 +100,14 @@ export default class SignaturePanel extends Component {
               </td>
             </tr>
             <tr>
-            <td className="ad" colSpan="5">
-              <a href="http://www.alliance-francaise.co.nz/learn-french/intensive-immersion/?age_group_id=1&location_id=1&session_id=77&type_id=8&clicked_link=1&level_id=102" target="_blank">
-                <img src="https://alliance-francaise.sslsvc.com/media/website_posts/736/winter-intensive-beginners-website-banner2.png" alt="" />
-              </a>
-            </td>
+              <td className="ad" colSpan="3">
+                <a href="http://www.alliance-francaise.co.nz/learn-french/intensive-immersion/?age_group_id=1&location_id=1&session_id=77&type_id=8&clicked_link=1&level_id=102" target="_blank">
+                  <img src="https://alliance-francaise.sslsvc.com/media/website_posts/736/winter-intensive-beginners-website-banner2.png" alt="" />
+                </a>
+              </td>
             </tr>
             <tr>
-              <td colSpan="5" style={{height: 30 + 'px'}}>
+              <td colSpan="3" style={{height: 30 + 'px'}}>
                 <br />
               </td>
             </tr>

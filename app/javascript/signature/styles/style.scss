@@ -33,6 +33,7 @@
 }
 
 .panel {
+  padding-top: 5em;
   display: flex;
   flex-grow: 4;
   width: 68%;
@@ -65,8 +66,13 @@
 
     .content {
       line-height: 1;
-      padding: 10px 1px 5px 2px;
+      padding: 0px 1px 0px 14px;
       width: 150px;
+      border-left: 2px solid #E21837;
+      table {
+        margin-bottom: -2px;
+      }
+
       tr td {
         font-family:georgia,serif;
       }
@@ -123,8 +129,10 @@
         }
       }
     }
-
+    
     .ad a {
+      padding-top: 0px;
+      padding-bottom: 0px;
       img {
         float: left;
         width: 333px;
@@ -135,10 +143,14 @@
 
 table.small-icons {
   margin-top: 6px;
-
+  tbody tr {
+    height: auto;
+  }
   tbody tr td {
+    height: auto;
     padding-left: 0px;
-
+    padding-top: 0px;
+    padding-bottom: 0px;
     span {
       font-family:georgia,serif;
       a {
