@@ -16,7 +16,7 @@ export default class SignatureGenerator extends Component {
       country: "New Zealand",
       website: "www.alliance-francaise.co.nz",
       banner: "https://alliance-francaise.sslsvc.com/media/website_posts/736/winter-intensive-beginners-website-banner2.png",
-      bannerUrl: "http://www.alliance-francaise.co.nz/learn-french/intensive-immersion/?age_group_id=1&location_id=1&session_id=77&type_id=8&clicked_link=1&level_id=102"
+      bannerLink: "http://www.alliance-francaise.co.nz/learn-french/intensive-immersion/?age_group_id=1&location_id=1&session_id=77&type_id=8&clicked_link=1&level_id=102"
     };
 
     this.onChangeState = this.onChangeState.bind(this);
@@ -46,7 +46,7 @@ export default class SignatureGenerator extends Component {
           country={this.state.country}
           website={this.state.website}
           banner={this.state.banner}
-          bannerUrl={this.bannerUrl}
+          bannerLink={this.bannerLink}
           />
       </div>
     );

@@ -40,6 +40,14 @@ export default class SignatureForm extends Component {
           <label>website</label>
           <input type='text' name='website' onChange={this.props.onChangeInput}></input>
         </div>
+        <div className="form-group">
+          <label>Banner</label>
+          <input type='text' name='banner' onChange={this.props.onChangeInput}></input>
+        </div>
+        <div className="form-group">
+          <label>Banner Link</label>
+          <input type='text' name='bannerLink' onChange={this.props.onChangeInput}></input>
+        </div>
       </div>
     );
   }

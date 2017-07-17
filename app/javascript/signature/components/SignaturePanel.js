@@ -100,7 +100,7 @@ export default class SignaturePanel extends Component { render() {
             </tr>
             <tr>
               <td className="ad" colSpan="3">
-                <a href={this.props.bannerUrl} target="_blank">
+                <a href={this.props.bannerLink} target="_blank">
                   <img src={this.props.banner} alt="" />
                 </a>
               </td>
@@ -129,5 +129,5 @@ SignaturePanel.propTypes = {
   website: PropTypes.string,
   logo: PropTypes.string,
   banner: PropTypes.string, 
-  bannerUrl: PropTypes.string
+  bannerLink: PropTypes.string
 }
