@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
-export default class SignaturePanel extends Component {
-  render() {
+export default class SignaturePanel extends Component { render() {
     return(
       <div className="panel">
         <table>
@@ -16,23 +15,23 @@ export default class SignaturePanel extends Component {
                   <tbody>
                     <tr className="title">
                       <td>
-                       {this.props.name || "José-Marie CORTÈS"}
+                       {this.props.name}
                       </td> 
                     </tr>
                     <tr className="position">
                       <td>
-                      {this.props.position || "Director - Representative of the Fondation Alliance Française in New Zealand & Cook Islands"}
+                      {this.props.position }
                       
                       </td>
                     </tr>
                     <tr className="telephone">
                       <td>
-                        <a href={"tel:" + this.props.telephone || "+64(09)-376 00009"} value={this.props.telephone || "tel:+64(09)-376 00009"} target="_blank">{this.props.telephone || "+64(09)-376 00009"}</a>
+                        <a href={"tel:" + this.props.telephone} value={this.props.telephone} target="_blank">{this.props.telephone || ""}</a>
                       </td>
                     </tr>
                     <tr className="email">
                       <td>
-                        <a href={"mailto:" + this.props.email || "director@alliance-francaise.co.nz"} target="_blank">{this.props.email || "director@alliance-francaise.co.nz"}</a>
+                        <a href={"mailto:" + this.props.email} target="_blank">{this.props.email}</a>
                       </td>
                     </tr>
                     <tr className="street">
@@ -101,8 +100,8 @@ export default class SignaturePanel extends Component {
             </tr>
             <tr>
               <td className="ad" colSpan="3">
-                <a href="http://www.alliance-francaise.co.nz/learn-french/intensive-immersion/?age_group_id=1&location_id=1&session_id=77&type_id=8&clicked_link=1&level_id=102" target="_blank">
-                  <img src="https://alliance-francaise.sslsvc.com/media/website_posts/736/winter-intensive-beginners-website-banner2.png" alt="" />
+                <a href={this.props.bannerUrl} target="_blank">
+                  <img src={this.props.banner} alt="" />
                 </a>
               </td>
             </tr>
@@ -127,5 +126,8 @@ SignaturePanel.propTypes = {
   city: PropTypes.string,
   postcode: PropTypes.string,
   country: PropTypes.string,
-  website: PropTypes.string
+  website: PropTypes.string,
+  logo: PropTypes.string,
+  banner: PropTypes.string, 
+  bannerUrl: PropTypes.string
 }

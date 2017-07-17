@@ -51,9 +51,9 @@
     } 
 
     .content {
-      line-height: 1;
+      white-space: pre-wrap;
       padding: 0px 1px 0px 14px;
-      width: 150px;
+      width: 180px;
       border-left: 2px solid #E21837;
       table {
         margin-bottom: -2px;
@@ -68,12 +68,14 @@
         color:RGB(29, 29, 29);
         font-size:11px;
       }
-
+      tr.position {
+        line-height: 1.1em;
+      }
       tr.position td {
+        white-space: pre-wrap;
         color:rgb(85,96,97);
         font-size:10px;
         font-style:italic;
-        line-height: 1.3em;
       }
 
       tr.telephone td {
