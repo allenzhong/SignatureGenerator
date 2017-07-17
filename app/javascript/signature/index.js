@@ -1,11 +1,14 @@
 import './styles/style';
 import React from 'react'
 import ReactDOM from 'react-dom'
-import SignatureGenerator from './components/SignatureGenerator';
+import { BrowserRouter } from 'react-router-dom';
+import SignatureApp from './components/SignatureApp';
 
 document.addEventListener('DOMContentLoaded', () => {
-  ReactDOM.render(
-    <SignatureGenerator />,
+  ReactDOM.render((
+    <BrowserRouter>
+      <SignatureApp />
+    </BrowserRouter>),
     document.body.appendChild(document.createElement('div')),
   )
 })
