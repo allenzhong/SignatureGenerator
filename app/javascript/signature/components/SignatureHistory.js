@@ -7,7 +7,7 @@ export default class SignatureHistory extends Component {
     return (
       <div className='history'>
         <div>
-          <Link to='/signatures/create'>New Signature {`\u271A`}</Link> 
+          <Link to='/signatures/create'>{`New Signature \u271A`}</Link> 
         </div>
         <ul className="links">
           { signatures.map((sig) => {
