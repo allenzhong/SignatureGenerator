@@ -1,1 +1,1 @@
-json.array! @signatures, :id, :name, :telphone, :email, :street, :city, :postcode, :country, :website
+json.array! @signatures, :id, :name, :telephone, :email, :street, :city, :postcode, :country, :website, :banner, :banner_link
