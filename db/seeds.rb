@@ -8,7 +8,7 @@
 jose = Signature.create({
   name: "José-Marie CORTÈS",
   position: "Director - Representative                      of the Fondation Alliance Française   in New Zealand & Cook Islands",
-  telphone: "+64(09)-376 00009",
+  telephone: "+64(09)-376 00009",
   email: "director@alliance-francaise.co.nz",
   street: "9a Kirk Street, Grey Lynn",
   city: "Auckland",
