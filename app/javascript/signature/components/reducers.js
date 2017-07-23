@@ -1,11 +1,11 @@
 import { combineReducers } from 'redux'
+import { routerReducer } from 'react-router-redux'
 import {
   REQUEST_SIGNATURE_HISTORY,
   RECEIVE_SIGNATURE_HISTORY,
   SELECT_SIGNATURE,
   NEW_SIGNATURE
 } from './actions'
-
 
 function signatureHistory(
   state = {
@@ -29,4 +29,4 @@ function signatureHistory(
   }
 }
 
-export const rootReducer = combineReducers({signatureHistory})
+export const rootReducer = combineReducers({signatureHistory, routing: routerReducer})

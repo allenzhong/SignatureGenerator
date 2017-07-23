@@ -5,6 +5,7 @@ export default class SignatureHistory extends Component {
 
   render() {
     let signatures = this.props.signatures || [];
+    console.log(Link)
     return (
       <div className='history'>
         <div>

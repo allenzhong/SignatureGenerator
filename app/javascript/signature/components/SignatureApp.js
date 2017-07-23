@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux';
-import { Switch, Route } from 'react-router-dom';
+import { Switch, Route } from 'react-router';
 import PropTypes from 'prop-types';
 import SignatureHistory from './SignatureHistory';
 import SignatureMain from './SignatureMain';
