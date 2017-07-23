@@ -2,8 +2,9 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 
 export default class SignatureHistory extends Component {
+
   render() {
-    let signatures = ["Joe", "Anne"];
+    let signatures = this.props.signatures || [];
     return (
       <div className='history'>
         <div>
@@ -11,7 +12,7 @@ export default class SignatureHistory extends Component {
         </div>
         <ul className="links">
           { signatures.map((sig) => {
-              return (<li key={sig}><Link to={`/signatures/` + sig}>{sig}</Link></li>)
+              return (<li key={sig.id}><Link to={`/signatures/` + sig.id}>{sig.name}</Link></li>)
           })}
         </ul>
       </div>
