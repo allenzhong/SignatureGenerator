@@ -1,1 +1,1 @@
-json.array! @signatures, partial: 'signatures/signature', as: :signature
+json.array! @signatures, :id, :name, :telphone, :email, :street, :city, :postcode, :country, :website
