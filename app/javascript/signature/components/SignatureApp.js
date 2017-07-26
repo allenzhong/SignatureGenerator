@@ -17,7 +17,6 @@ class SignatureApp extends Component {
   }
 
   componentDidMount() {
-    console.log(this.props)
     const {dispatch} = this.props
     dispatch(fetchSignatureHisotryIfNeeded())
   }
@@ -38,7 +37,6 @@ SignatureApp.propTypes = {
 }
 
 const mapStateToProps = (state) => {
-  console.log(state)
   return { signatures: state.signatureHistory.items }
 }
 

@@ -1,7 +1,20 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import { connect } from 'react-redux';
+import { selectSignatureHistory } from './actions'
 
-export default class SignatureHistory extends Component {
+class SignatureHistory extends Component {
+  constructor(props){
+    super(props)
+    this.onClick = this.onClick.bind(this);
+  }
+
+  onClick(e) {
+    let id = e.target.dataset.id;
+    let { dispatch } = this.props
+    console.log(id);
+    dispatch(selectSignatureHistory(id))
+  }
 
   render() {
     let signatures = this.props.signatures || [];
@@ -12,10 +25,17 @@ export default class SignatureHistory extends Component {
         </div>
         <ul className="links">
           { signatures.map((sig) => {
-              return (<li key={sig.id}><Link to={`/signatures/` + sig.id}>{sig.name}</Link></li>)
+              return (<li key={sig.id}><a data-id={sig.id} onClick={this.onClick}>{sig.name}</a></li>)
           })}
         </ul>
       </div>
     );
   }
 }
+
+const mapStateToProps = (state) => {
+  return { signatures: state.signatureHistory.items }
+}
+
+export default connect(mapStateToProps)(SignatureHistory)
+
