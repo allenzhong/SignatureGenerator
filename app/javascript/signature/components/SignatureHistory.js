@@ -12,7 +12,6 @@ class SignatureHistory extends Component {
   onClick(e) {
     let id = e.target.dataset.id;
     let { dispatch } = this.props
-    console.log(id);
     dispatch(selectSignatureHistory(id))
   }
 
