@@ -8,15 +8,6 @@ import {
   NEW_SIGNATURE
 } from './actions'
 
-
-function selectSignatureHistory(state={}, action){
-  switch(action.type){
-
-    default:
-      return state
-  }
-}
-
 function signatureHistory(
   state = {
     isFetching: false,
