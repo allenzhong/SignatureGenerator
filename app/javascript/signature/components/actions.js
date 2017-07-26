@@ -5,7 +5,7 @@ export const RECEIVE_SIGNATURE_HISTORY = 'RECEIVE_SIGNATURE_HISTORY';
 export const SELECT_SIGNATURE = 'SELECT_SIGNATURE';
 export const NEW_SIGNATURE = 'NEW_SIGNATURE';
 export const UPDATE_SIGNATURE = 'UPDATE_SIGNATURE'
-const requstSignatureHistoryURL = 'http://localhost:5000/signatures.json'
+const requstSignatureHistoryURL = '/signatures.json'
 
 export function requestSignatureHistory(){
   return {
