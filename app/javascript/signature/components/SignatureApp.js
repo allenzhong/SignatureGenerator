@@ -12,10 +12,6 @@ import {
 } from './actions'
 
 class SignatureApp extends Component {
-  constructor(props) {
-    super(props);
-  }
-
   componentDidMount() {
     const {dispatch} = this.props
     dispatch(fetchSignatureHisotryIfNeeded())
