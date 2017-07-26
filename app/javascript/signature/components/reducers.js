@@ -4,8 +4,18 @@ import {
   REQUEST_SIGNATURE_HISTORY,
   RECEIVE_SIGNATURE_HISTORY,
   SELECT_SIGNATURE,
+  UPDATE_SIGNATURE,
   NEW_SIGNATURE
 } from './actions'
+
+
+function selectSignatureHistory(state={}, action){
+  switch(action.type){
+
+    default:
+      return state
+  }
+}
 
 function signatureHistory(
   state = {
@@ -23,6 +33,15 @@ function signatureHistory(
       return Object.assign({}, state, {
         isFetching: false,
         items: action.signatureHistory
+      })
+    case SELECT_SIGNATURE:
+      let signature = state.items ? state.items.find( sig => sig.id == action.selectedSignatureId ) : {}
+      return Object.assign({}, state, {
+        selectedSignature: signature
+      })
+    case UPDATE_SIGNATURE:
+      return Object.assign({}, state, {
+        selectedSignature: action.selectedSignature
       })
     default:
       return state
