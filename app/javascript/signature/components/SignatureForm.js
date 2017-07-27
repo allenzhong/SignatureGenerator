@@ -48,7 +48,7 @@ export default class SignatureForm extends Component {
         </div>
         <div className="form-group">
           <label>Banner Link</label>
-          <input type='text' name='bannerLink' value={signature.bannerLink || ""} onChange={this.props.onChangeInput}></input>
+          <input type='text' name='bannerLink' value={signature.banner_link || ""} onChange={this.props.onChangeInput}></input>
         </div>
       </div>
     );

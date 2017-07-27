@@ -15,8 +15,12 @@
     list-style: none;
     margin-bottom: 0.3em;
     a {
-      text-decoration: none;
+      text-decoration: underline;
+      &:hover {
+        cursor: pointer;
+      }
     }
+
   }
 }
 .main {
@@ -117,6 +121,7 @@
       }
 
       tr.email td {
+        padding: 0px;
         a {
           color:rgb(85,96,97);
           text-decoration:none;

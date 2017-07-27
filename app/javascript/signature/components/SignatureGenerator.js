@@ -35,7 +35,7 @@ class SignatureGenerator extends Component {
           country={signature.country || ""}
           website={signature.website || ""}
           banner={signature.banner || ""}
-          bannerLink={signature.bannerLink || ""}
+          bannerLink={signature.banner_link || ""}
           />
       </div>
     );

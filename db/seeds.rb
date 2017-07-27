@@ -19,3 +19,16 @@ jose = Signature.create({
   banner_link: "http://www.alliance-francaise.co.nz/learn-french/intensive-immersion/?age_group_id=1&location_id=1&session_id=77&type_id=8&clicked_link=1&level_id=102"
 })
 
+anna = Signature.create({
+  name: "Anne GUMMER",
+  position: "Communication Officer",
+  telephone: "+64(09)-376 00009",
+  email: "communication@alliance-francaise.co.nz",
+  street: "9a Kirk Street, Grey Lynn",
+  city: "Auckland",
+  postcode: "1025",
+  country: "New Zealand",
+  website: "www.alliance-francaise.co.nz",
+  banner: "https://alliance-francaise.sslsvc.com/media/website_posts/736/winter-intensive-beginners-website-banner2.png",
+  banner_link: "http://www.alliance-francaise.co.nz/learn-french/intensive-immersion/?age_group_id=1&location_id=1&session_id=77&type_id=8&clicked_link=1&level_id=102"
+})
