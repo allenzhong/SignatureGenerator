@@ -7,6 +7,8 @@ export const NEW_SIGNATURE = 'NEW_SIGNATURE';
 export const CREATE_SIGNATURE = 'CREATE_SIGNATURE';
 export const ON_CHANGE_SIGNATURE = 'ON_CHANGE_SIGNATURE';
 export const SAVED_SIGNATURE = 'SAVED_SIGNATURE';
+export const DELETE_SIGNATURE = 'DELETE_SIGNATURE';
+
 const requstSignatureHistoryURL = '/signatures.json';
 const requstCreateSignatureHistoryURL = '/signatures.json';
 const requestUpdateSignatureHistoryURL = '/signatures/';
@@ -39,7 +41,7 @@ export function createSignatureHistory(newSignature){
 function requestCreateSignatureHistry(newSignature){
   const token = document.querySelectorAll('meta[name="csrf-token"]')[0].content;
   let method = newSignature.id ? "PATCH" : "POST";
-  let url = newSignature.id ? `${requestUpdateSignatureHistoryURL}/${newSignature.id}` : requestCreateSignatureHistry;
+  let url = newSignature.id ? `${requestUpdateSignatureHistoryURL}/${newSignature.id}` : requstCreateSignatureHistoryURL;
   return dispatch => {
     return fetch(url, {
       method: method,
@@ -69,6 +71,36 @@ export function savedSignatureHistory(){
   }
 }
 
+export function deleteSignatureHistory(selectedSignatureId){
+  return (dispatch, getState) => {
+    dispatch(requestDeleteSignatureHistory(selectedSignatureId));
+  }
+}
+
+function requestDeleteSignatureHistory(selectedSignatureId){
+  const token = document.querySelectorAll('meta[name="csrf-token"]')[0].content;
+  let url = `${requestUpdateSignatureHistoryURL}/${selectedSignatureId}`;
+  return dispatch => {
+    return fetch(url, {
+      method: 'DELETE',
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json',
+        'X-Requested-With': 'XMLHttpRequest',
+        'X-CSRF-Token': token
+      },
+      credentials: 'same-origin'
+    })
+    .then(response => {
+      console.log(response);
+      dispatch(savedSignatureHistory());
+      return response.status;
+    })
+    .then(statue => {
+      dispatch(fetchSignatureHisotryIfNeeded());
+    })
+  }
+}
 
 export function onChangeSignatureHistory(selectedSignature){
   return{

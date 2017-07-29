@@ -1,18 +1,27 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
-import { selectSignatureHistory } from './actions'
+import { selectSignatureHistory, deleteSignatureHistory } from './actions'
 
 class SignatureHistory extends Component {
   constructor(props){
     super(props)
     this.onClick = this.onClick.bind(this);
+    this.onDelete = this.onDelete.bind(this);
   }
 
   onClick(e) {
     let id = e.target.dataset.id;
-    let { dispatch } = this.props
+    let { dispatch } = this.props;
     dispatch(selectSignatureHistory(id))
+  }
+
+  onDelete(e){
+    if(confirm('Are you sure to delete it?')) {
+      let id = e.target.dataset.id;
+      let { dispatch } = this.props;
+      dispatch(deleteSignatureHistory(id))
+    }
   }
 
   render() {
@@ -24,7 +33,13 @@ class SignatureHistory extends Component {
         </div>
         <ul className="links">
           { signatures.map((sig) => {
-              return (<li key={sig.id}><a data-id={sig.id} onClick={this.onClick}>{sig.name}</a></li>)
+              return (<li key={sig.id}>
+                        <span className='delete'>
+                          <a data-id={sig.id} onClick={this.onDelete}>{'\u2716'}</a>
+                        </span>
+                        <a data-id={sig.id} onClick={this.onClick}>{sig.name}</a>
+                        
+                      </li>)
           })}
         </ul>
       </div>
