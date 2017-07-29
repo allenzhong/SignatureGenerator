@@ -69,6 +69,6 @@ class SignaturesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def signature_params
-      params.fetch(:signature, {})
+      params.fetch(:signature, {}).permit(:id, :name, :telephone, :email, :street, :city, :postcode, :country, :website, :banner, :banner_link)
     end
 end
