@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import SignatureForm from './SignatureForm';
 import SignaturePanel from './SignaturePanel';
-import { updateSignatureHistory, createSignatureHistory } from './actions';
+import { onChangeSignatureHistory, createSignatureHistory } from './actions';
 
 class SignatureGenerator extends Component {
   constructor(props) {
@@ -17,7 +17,7 @@ class SignatureGenerator extends Component {
     let newSignature = Object.assign({}, this.props.signature,  {
       [name] : value,
     });
-    dispatch(updateSignatureHistory(newSignature));
+    dispatch(onChangeSignatureHistory(newSignature));
   }
 
   handleSubmit(e){

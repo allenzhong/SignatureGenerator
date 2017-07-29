@@ -4,7 +4,7 @@ import {
   REQUEST_SIGNATURE_HISTORY,
   RECEIVE_SIGNATURE_HISTORY,
   SELECT_SIGNATURE,
-  UPDATE_SIGNATURE,
+  ON_CHANGE_SIGNATURE,
   NEW_SIGNATURE,
   SAVED_SIGNATURE
 } from './actions'
@@ -35,7 +35,7 @@ function signatureHistory(
       return Object.assign({}, state, {
         saved: true
       })
-    case UPDATE_SIGNATURE:
+    case ON_CHANGE_SIGNATURE:
       return Object.assign({}, state, {
         selectedSignature: action.selectedSignature
       })

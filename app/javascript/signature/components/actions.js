@@ -5,7 +5,7 @@ export const RECEIVE_SIGNATURE_HISTORY = 'RECEIVE_SIGNATURE_HISTORY';
 export const SELECT_SIGNATURE = 'SELECT_SIGNATURE';
 export const NEW_SIGNATURE = 'NEW_SIGNATURE';
 export const CREATE_SIGNATURE = 'CREATE_SIGNATURE';
-export const UPDATE_SIGNATURE = 'UPDATE_SIGNATURE';
+export const ON_CHANGE_SIGNATURE = 'ON_CHANGE_SIGNATURE';
 export const SAVED_SIGNATURE = 'SAVED_SIGNATURE';
 const requstSignatureHistoryURL = '/signatures.json';
 const requstCreateSignatureHistoryURL = '/signatures.json';
@@ -70,9 +70,9 @@ export function savedSignatureHistory(){
 }
 
 
-export function updateSignatureHistory(selectedSignature){
+export function onChangeSignatureHistory(selectedSignature){
   return{
-    type: UPDATE_SIGNATURE,
+    type: ON_CHANGE_SIGNATURE,
     selectedSignature: selectedSignature
   }
 }
