@@ -38,7 +38,6 @@ export function createSignatureHistory(newSignature){
 
 function requestCreateSignatureHistry(newSignature){
   const token = document.querySelectorAll('meta[name="csrf-token"]')[0].content;
-  console.log(token);
   return dispatch => {
     return fetch(requstCreateSignatureHistoryURL, {
       method: 'POST',
@@ -54,6 +53,10 @@ function requestCreateSignatureHistry(newSignature){
     .then(response => {
       console.log(response);
       dispatch(savedSignatureHistory());
+      return response.statue;
+    })
+    .then(statue => {
+      dispatch(fetchSignatureHisotryIfNeeded());
     })
   }
 }
