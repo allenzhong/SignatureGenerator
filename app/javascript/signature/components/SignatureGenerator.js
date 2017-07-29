@@ -2,11 +2,12 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import SignatureForm from './SignatureForm';
 import SignaturePanel from './SignaturePanel';
-import { updateSignatureHistory } from './actions';
+import { updateSignatureHistory, createSignatureHistory } from './actions';
 
 class SignatureGenerator extends Component {
   constructor(props) {
     super(props);
+    this.handleSubmit = this.handleSubmit.bind(this);
     this.onChangeInput = this.onChangeInput.bind(this);
   }
  
@@ -19,11 +20,18 @@ class SignatureGenerator extends Component {
     dispatch(updateSignatureHistory(newSignature));
   }
 
+  handleSubmit(e){
+    e.preventDefault();
+    let { dispatch, signature} = this.props;
+    console.log(signature);
+    dispatch(createSignatureHistory(signature));
+  }
+
   render() {
     let signature = this.props.signature ? this.props.signature : {}
     return(
       <div className="container">
-        <SignatureForm signature={signature} onChangeInput={this.onChangeInput}/>
+        <SignatureForm signature={signature} handleSubmit={this.handleSubmit} onChangeInput={this.onChangeInput}/>
         <SignaturePanel 
           name={signature.name || ""}
           position={signature.position || ""}

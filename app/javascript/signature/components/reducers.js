@@ -5,7 +5,8 @@ import {
   RECEIVE_SIGNATURE_HISTORY,
   SELECT_SIGNATURE,
   UPDATE_SIGNATURE,
-  NEW_SIGNATURE
+  NEW_SIGNATURE,
+  SAVED_SIGNATURE
 } from './actions'
 
 function signatureHistory(
@@ -29,6 +30,10 @@ function signatureHistory(
       let signature = state.items ? state.items.find( sig => sig.id == action.selectedSignatureId ) : {}
       return Object.assign({}, state, {
         selectedSignature: signature
+      })
+    case SAVED_SIGNATURE:
+      return Object.assign({}, state, {
+        saved: true
       })
     case UPDATE_SIGNATURE:
       return Object.assign({}, state, {
