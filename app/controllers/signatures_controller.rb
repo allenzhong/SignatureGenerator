@@ -4,7 +4,7 @@ class SignaturesController < ApplicationController
   # GET /signatures
   # GET /signatures.json
   def index
-    @signatures = Signature.all
+    @signatures = Signature.ordered_by_name
   end
 
   # GET /signatures/1
@@ -69,6 +69,6 @@ class SignaturesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def signature_params
-      params.fetch(:signature, {}).permit(:id, :name, :telephone, :email, :street, :city, :postcode, :country, :website, :banner, :banner_link)
+      params.fetch(:signature, {}).permit(:id, :name, :position, :telephone, :email, :street, :city, :postcode, :country, :website, :banner, :banner_link)
     end
 end

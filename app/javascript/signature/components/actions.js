@@ -9,7 +9,7 @@ export const UPDATE_SIGNATURE = 'UPDATE_SIGNATURE';
 export const SAVED_SIGNATURE = 'SAVED_SIGNATURE';
 const requstSignatureHistoryURL = '/signatures.json';
 const requstCreateSignatureHistoryURL = '/signatures.json';
-
+const requestUpdateSignatureHistoryURL = '/signatures/';
 export function requestSignatureHistory(){
   return {
     type: REQUEST_SIGNATURE_HISTORY
@@ -38,9 +38,11 @@ export function createSignatureHistory(newSignature){
 
 function requestCreateSignatureHistry(newSignature){
   const token = document.querySelectorAll('meta[name="csrf-token"]')[0].content;
+  let method = newSignature.id ? "PATCH" : "POST";
+  let url = newSignature.id ? `${requestUpdateSignatureHistoryURL}/${newSignature.id}` : requestCreateSignatureHistry;
   return dispatch => {
-    return fetch(requstCreateSignatureHistoryURL, {
-      method: 'POST',
+    return fetch(url, {
+      method: method,
       headers: {
         'Accept': 'application/json',
         'Content-Type': 'application/json',
