@@ -26,6 +26,10 @@ function signatureHistory(
         isFetching: false,
         items: action.signatureHistory
       })
+    case NEW_SIGNATURE:
+      return Object.assign({}, state, {
+        selectedSignature: null
+      })
     case SELECT_SIGNATURE:
       let signature = state.items ? state.items.find( sig => sig.id == action.selectedSignatureId ) : {}
       return Object.assign({}, state, {

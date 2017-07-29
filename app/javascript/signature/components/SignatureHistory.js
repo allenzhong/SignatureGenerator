@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
-import { selectSignatureHistory, deleteSignatureHistory } from './actions'
+import { newSignatureHistory, selectSignatureHistory, deleteSignatureHistory } from './actions'
 
 class SignatureHistory extends Component {
   constructor(props){
@@ -29,7 +29,12 @@ class SignatureHistory extends Component {
     return (
       <div className='history'>
         <div>
-          Signatures List
+          List
+          <span className='newSignature'>
+            <a onClick={() => this.props.dispatch(newSignatureHistory())}>
+              {`\u271A New Signature` }
+            </a>
+          </span>
         </div>
         <ul className="links">
           { signatures.map((sig) => {

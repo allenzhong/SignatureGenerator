@@ -11,6 +11,18 @@
   box-shadow: 5px 5px 5px #ccc;
   flex-grow: 1;
   height: 100vh;
+  span.newSignature {
+    float: right;
+    a {
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+  .links {
+    padding-left:0.5em;
+  }
+
   .links li {
     list-style: none;
     margin-bottom: 0.3em;

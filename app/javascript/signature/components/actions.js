@@ -32,6 +32,12 @@ export function selectSignatureHistory(selectedSignatureId){
   }
 }
 
+export function newSignatureHistory(){
+  return{
+    type: NEW_SIGNATURE
+  }
+}
+
 export function createSignatureHistory(newSignature){
   return (dispatch, getState) => {
     return dispatch(requestCreateSignatureHistry(newSignature));
