@@ -3,7 +3,6 @@ import React, { Component } from 'react';
 export default class SignatureForm extends Component {
   render() {
     let { signature }= this.props;
-
     return(
       <div className='form'>
         <form>
@@ -52,7 +51,7 @@ export default class SignatureForm extends Component {
             <input type='text' name='banner_link' value={signature.banner_link || ""} onChange={this.props.onChangeInput}></input>
           </div>
           <div className="form-group">
-            <button onClick={this.props.handleSubmit}>Submit</button>
+            <button onClick={this.props.handleSubmit}>Save</button>
           </div>
         </form>
       </div>
