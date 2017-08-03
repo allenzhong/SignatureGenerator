@@ -37,14 +37,15 @@ class SignatureHistory extends Component {
           </span>
         </div>
         <ul className="links">
-          { signatures.map((sig) => {
-              return (<li key={sig.id}>
-                        <span className='delete'>
-                          <a data-id={sig.id} onClick={this.onDelete}>{'\u2716'}</a>
-                        </span>
-                        <a data-id={sig.id} onClick={this.onClick}>{sig.name}</a>
-                        
-                      </li>)
+          {signatures.map((sig) => {
+              return (
+                <li key={sig.id}>
+                  <span className='delete'>
+                    <a data-id={sig.id} onClick={this.onDelete}>{'\u2716'}</a>
+                  </span>
+                  <a data-id={sig.id} onClick={this.onClick}>{sig.name}</a>
+                </li>
+              )
           })}
         </ul>
       </div>

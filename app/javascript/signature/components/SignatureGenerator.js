@@ -23,7 +23,6 @@ class SignatureGenerator extends Component {
   handleSubmit(e){
     e.preventDefault();
     let { dispatch, signature} = this.props;
-    console.log(signature);
     dispatch(createSignatureHistory(signature));
   }
 

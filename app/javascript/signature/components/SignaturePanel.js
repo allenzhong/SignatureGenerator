@@ -22,7 +22,6 @@ export default class SignaturePanel extends Component {
                     <tr className="position">
                       <td>
                       {this.props.position }
-                      
                       </td>
                     </tr>
                     <tr className="telephone">
